@@ -1,0 +1,10 @@
+metadata:
+  id: "CUSTOM_3.1"
+  name: "Ensure that ‘Enable Infrastructure Encryption’ for Each Storage Account in Azure Storage is Set to ‘enabled’"
+  category: "NETWORKING"
+definition:
+    cond_type: attribute
+    resource_types: "Microsoft.Storage/storageAccounts"
+    attribute: "properties.encryption.requireInfrastructureEncryption"
+    operator: "equals"
+    value: "true"

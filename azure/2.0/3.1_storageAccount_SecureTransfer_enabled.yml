@@ -1,0 +1,10 @@
+metadata:
+  id: "CUSTOM_3.1"
+  name: "Ensure that 'Secure transfer required' is set to 'Enabled'"
+  category: "NETWORKING"
+definition:
+    cond_type: attribute
+    resource_types: "Microsoft.Storage/storageAccounts"
+    attribute: "properties.supportsHttpsTrafficOnly"
+    operator: "equals"
+    value: "true"

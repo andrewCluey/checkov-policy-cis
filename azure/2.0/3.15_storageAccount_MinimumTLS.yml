@@ -1,0 +1,10 @@
+metadata:
+  id: "CUSTOM_3.15"
+  name: "Ensure the "Minimum TLS version" for storage accounts is set to Version 1.2"
+  category: "NETWORKING"
+definition:
+    cond_type: attribute
+    resource_types: "Microsoft.Storage/storageAccounts"
+    attribute: "properties.minimumTlsVersion"
+    operator: "equals"
+    value: "TLS1_2"

@@ -1,0 +1,10 @@
+metadata:
+  id: "CUSTOM_3.7"
+  name: "Allow blob public access set to 'False'"
+  category: "NETWORKING"
+definition:
+    cond_type: attribute
+    resource_types: "Microsoft.Storage/storageAccounts"
+    attribute: "properties.allowBlobPublicAccess"
+    operator: "equals"
+    value: "false"
